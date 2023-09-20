@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "GT-Flexa";
+  src: url("/public/fonts/GT-Flexa/GT-Flexa-Mono-Bold-Trial.otf")
+    format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Kaldera";
+  src: url("/public/fonts/Kaldera/Kaldera.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("/public/fonts/PPNeueMontreal/PPNeueMontreal-Bold.otf")
+    format("opentype");
+  font-weight: normal;
+}
