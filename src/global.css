@@ -1,17 +1,25 @@
 @font-face {
-  font-family: "GT-Flexa";
-  src: url("/public/fonts/GT-Flexa/GT-Flexa-Mono-Bold-Trial.otf")
-    format("opentype");
+  font-family: "Belleza";
+  src: url("/fonts/Belleza/Belleza-Regular.ttf") format("truetype");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Lora-Regular";
+  src: url("/fonts/Lora/Lora-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lora-Bold";
+  src: url("/fonts/Lora/Lora-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 @font-face {
-  font-family: "Kaldera";
-  src: url("/public/fonts/Kaldera/Kaldera.otf") format("opentype");
+  font-family: "Quicksand-Bold";
+  src: url("/fonts/Quicksand/Quicksand-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 @font-face {
-  font-family: "PPNeueMontreal";
-  src: url("/public/fonts/PPNeueMontreal/PPNeueMontreal-Bold.otf")
-    format("opentype");
+  font-family: "Quicksand-Light";
+  src: url("/fonts/Quicksand/Quicksand-Light.ttf") format("truetype");
   font-weight: normal;
 }

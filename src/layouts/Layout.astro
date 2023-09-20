@@ -3,7 +3,7 @@ import "../global.css";
 interface Props {
   title: string;
 }
-import Nav from "../pages/components/Nav";
+import Nav from "../components/Nav";
 const { title } = Astro.props;
 ---
 
@@ -17,7 +17,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-green">
+  <body class="bg-white">
     <main>
       <Nav client:load />
       <slot />

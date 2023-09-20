@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useMediaQuery } from "../../util/useMediaQuery";
+
+// icons
+import logo from "../icons/logo.png";
+import search from "../icons/search-icon.png";
+import cart from "../icons/cart-icon.png";
+import profile from "../icons/profile-icon.png";
 
 export default function Nav() {
   const [toggled, setToggled] = useState(false);
-  // media query for responsiveness
-  // const matches = useMediaQuery("(max-width:780px)");
 
-  // framer motion variant
+  // framer motion variants for nav animation
   const navMove = {
     visible: {
       opacity: 1,
@@ -53,19 +56,11 @@ export default function Nav() {
   };
 
   return (
-    <nav className="flex items-center justify-between text-white pt-12 pb-4 mb-4 relative mx-8 md:mx-16 lg:mx-32 text-center">
-      <div className="flex justify-center items-center gap-2 h-16">
-        <a
-          href="/"
-          className="text-white font-GT-_Flexa w-12 h-12 border-2 rounded-full  text-xl hover:bg-white hover:text-green text-center flex items-center justify-center"
-        >
-          GL
+    <nav className="flex items-center justify-between text-black pt-8 pb-4 mb-4 relative mx-8 md:mx-16 lg:mx-32 text-center">
+      <div className="flex justify-center items-center gap-2 h-8 w-1/4">
+        <a href="/" className="text-black flex items-center justify-center">
+          <img className="h-8" src={logo.src} alt="logo" />
         </a>
-
-        {/* Title */}
-        <h1 className="text-xl font-PPNeueMontreal text-white text-center">
-          Green Life
-        </h1>
       </div>
 
       {/* desktop nav */}
@@ -74,7 +69,7 @@ export default function Nav() {
         variants={navUp}
         animate="visible"
         initial="hidden"
-        className="hidden lg:flex gap-12 font-GT-_Flexa font-bold "
+        className="hidden lg:flex gap-12 font-Quicksand_B font-bold "
       >
         <motion.a
           variants={linkUp}
@@ -108,35 +103,50 @@ export default function Nav() {
         </motion.a>
       </motion.div>
 
-      {/* hamburger */}
+      <div className="flex w-1/2 items-center justify-around">
+        {/* icons */}
+        <div className="flex items-center justify-between w-2/3">
+          <img
+            className="hover:cursor-pointer h-6"
+            src={search.src}
+            alt="search-icon"
+          />
+          <img
+            className="hover:cursor-pointer h-6"
+            src={profile.src}
+            alt="profile-icon"
+          />
+          <img
+            className="hover:cursor-pointer h-6"
+            src={cart.src}
+            alt="cart-icon"
+          />
+        </div>
+        {/* hamburger */}
 
-      <div
-        onClick={() => setToggled((prevToggle) => !prevToggle)}
-        className="space-y-1.5 cursor-pointer z-50 lg:hidden"
-      >
-        <motion.span
-          animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }}
-          className="block h-0.5 w-8 bg-white"
-        ></motion.span>
-        <motion.span
-          animate={{ width: toggled ? 0 : 24 }}
-          className="block h-0.5 w-6 bg-white"
-        ></motion.span>
-        <motion.span
-          animate={{
-            rotateZ: toggled ? -45 : 0,
-            y: toggled ? -8 : 0,
-            width: toggled ? 32 : 16,
-          }}
-          className="block h-0.5 w-4 bg-white"
-        ></motion.span>
+        <div
+          onClick={() => setToggled((prevToggle) => !prevToggle)}
+          className=" ml-10 space-y-1.5 cursor-pointer z-50  lg:hidden"
+        >
+          <motion.span
+            animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 5 : 0 }}
+            className="block h-0.5 w-6 bg-black"
+          ></motion.span>
+          <motion.span
+            animate={{
+              rotateZ: toggled ? -45 : 0,
+              y: toggled ? -5 : 0,
+            }}
+            className="block h-0.5 w-6 bg-black"
+          ></motion.span>
+        </div>
       </div>
       {/* mobile nav */}
       {toggled && (
         <motion.div
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 25 }}
-          className="flex gap-12 font-GT-_Flexa font-bold fixed bg-green bottom-0 left-0 w-full h-full items-center justify-center z-40 "
+          className="flex gap-12 font-Quicksand_B font-bold fixed bg-white bottom-0 left-0 w-full h-full items-center justify-center z-40 "
         >
           <motion.div
             variants={navMove}

@@ -1,15 +1,42 @@
 ---
 import { Image } from "astro:assets";
-import plant from "../images/pexels-huy-phan.jpg";
+import plant from "../images/unsplash_YAPZt8wxMO4.png";
 ---
 
-<div class="relative flex items-center justify-center h-full">
-  <!-- <div class="flex w-full h-1/2">
-    <Image class="" src={plant} alt="An image of a house plant" />
-  </div> -->
-  <div class="text-white font-PPNeueMontreal w-full h-fit">
-    <h1 class="text-4xl m-0 h-full p-2 text-left">
-      Welcome to Green Life: Cultivating Beauty, One Leaf at a Time
+<div class="relative">
+  <!-- hero text -->
+  <div class="text-black absolute top-10 h-64 space-y-2 w-1/2 pl-6">
+    <h1 class="w-4/5 font-Belleza text-3xl font-bold mt-8 mb-10">
+      Best house plants varieties.
     </h1>
+    <h2 class="text-xl text-bold">
+      Beautiful living greenery homes and offices
+    </h2>
+    <p class="font-Quicksand_L text-black text-xs py-1">
+      We've been mentioned in the press
+    </p>
+    <button class="rounded-3xl text-sm bg-black w-32 h-10 text-white px-4 py-2"
+      >Shop now</button
+    >
+    <div class="flex items-center justify-around w-fit gap-6 pt-4">
+      <h2 class="font-Quicksand_B text-gray-light text-xl">Bloomberg</h2>
+      <h2 class="font-Lora_B text-gray-light text-xl">Forbes</h2>
+    </div>
+  </div>
+  <!-- image -->
+  <div class="w-full h-[376px]">
+    <Image class="w-full h-full" src={plant} alt="An image of a house plant" />
+  </div>
+  <div class="w-full p-8 flex items-center justify-center">
+    <p class="w-4/5 font-Quicksand_L text-center">
+      Each houseplant set is handled quickly and safely before being sent to
+      your destination in specially designed insulated packaging.
+    </p>
+  </div>
+  <div>
+    <p class="text-center font-Belleza text-3xl">
+      Learn how we take care of your plant at every stage of its journey from
+      our greenhouse to your home.
+    </p>
   </div>
 </div>
