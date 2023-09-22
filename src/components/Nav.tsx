@@ -2,10 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 // icons
-import logo from "../icons/logo.png";
-import search from "../icons/search-icon.png";
-import cart from "../icons/cart-icon.png";
-import profile from "../icons/profile-icon.png";
+import logo from "../assets/icons/logo.png";
+import search from "../assets/icons/search-icon.png";
+import cart from "../assets/icons/cart-icon.png";
+import profile from "../assets/icons/profile-icon.png";
 
 export default function Nav() {
   const [toggled, setToggled] = useState(false);
@@ -56,10 +56,10 @@ export default function Nav() {
   };
 
   return (
-    <nav className="flex items-center justify-between text-black pt-8 pb-4 mb-4 relative mx-8 md:mx-16 lg:mx-32 text-center">
-      <div className="flex justify-center items-center gap-2 h-8 w-1/4">
+    <nav className="flex items-center justify-between text-black pt-8 pb-4 mb-4 relative mx-4 md:mx-10 lg:mx-12 text-center">
+      <div className="flex justify-center items-center gap-2 h-8 w-fit lg:w-1/5 md:justify-start">
         <a href="/" className="text-black flex items-center justify-center">
-          <img className="h-8" src={logo.src} alt="logo" />
+          <img className="h-8 w-24 md:w-fit" src={logo.src} alt="logo" />
         </a>
       </div>
 
@@ -69,7 +69,7 @@ export default function Nav() {
         variants={navUp}
         animate="visible"
         initial="hidden"
-        className="hidden lg:flex gap-12 font-Quicksand_B font-bold "
+        className="hidden lg:flex gap-12 font-Quicksand_B font-bold text-sm lg:w-3/5 lg:items-center lg:justify-center"
       >
         <motion.a
           variants={linkUp}
@@ -86,6 +86,16 @@ export default function Nav() {
           animate="visible"
           initial="hidden"
           custom={1}
+          href="/plants"
+          className="hover:underline"
+        >
+          Plants
+        </motion.a>
+        <motion.a
+          variants={linkUp}
+          animate="visible"
+          initial="hidden"
+          custom={2}
           href="/services"
           className="hover:underline"
         >
@@ -95,7 +105,7 @@ export default function Nav() {
           variants={linkUp}
           animate="visible"
           initial="hidden"
-          custom={2}
+          custom={3}
           href="/contact"
           className="hover:underline"
         >
@@ -103,30 +113,30 @@ export default function Nav() {
         </motion.a>
       </motion.div>
 
-      <div className="flex w-1/2 items-center justify-around">
+      <div className="flex w-1/2 items-center justify-around sm:w-1/3 lg:w-1/5 lg:justify-center">
         {/* icons */}
-        <div className="flex items-center justify-between w-2/3">
+        <div className="flex items-center justify-around  w-full gap-6 lg:w-1/2 lg:items-end mt-2 lg:m-0">
           <img
-            className="hover:cursor-pointer h-6"
+            className="hover:cursor-pointer h-4 lg:h-5"
             src={search.src}
             alt="search-icon"
           />
           <img
-            className="hover:cursor-pointer h-6"
+            className="hover:cursor-pointer  h-4 lg:h-5"
             src={profile.src}
             alt="profile-icon"
           />
           <img
-            className="hover:cursor-pointer h-6"
+            className="hover:cursor-pointer  h-4 lg:h-5"
             src={cart.src}
             alt="cart-icon"
           />
         </div>
-        {/* hamburger */}
 
+        {/* hamburger button */}
         <div
           onClick={() => setToggled((prevToggle) => !prevToggle)}
-          className=" ml-10 space-y-1.5 cursor-pointer z-50  lg:hidden"
+          className=" ml-10 mt-2 space-y-1.5 cursor-pointer z-50  lg:hidden"
         >
           <motion.span
             animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 5 : 0 }}
@@ -152,10 +162,13 @@ export default function Nav() {
             variants={navMove}
             animate="visible"
             initial="hidden"
-            className="flex flex-col text-xl gap-24"
+            className="flex flex-col text-lg gap-24"
           >
             <motion.a variants={linkMove} href="/">
               Home
+            </motion.a>
+            <motion.a variants={linkMove} href="/plants">
+              Plants
             </motion.a>
             <motion.a variants={linkMove} href="/services">
               Services

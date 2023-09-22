@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import plant from "../assets/images/unsplash_YAPZt8wxMO4.png";
+---
+
+<div class="relative w-screen">
+  <!-- hero text -->
+  <div class="text-black absolute h-96 max-h-screen w-1/2 pl-4 pr-2 z-10">
+    <!--  -->
+    <div class="mt-16
+    mb-10">
+      <h1
+        class="block w-full font-Belleza xs:text-base sm:text-2xl font-bold m-0 p-0"
+      >
+        Best house
+      </h1>
+      <h1
+        class="block w-full font-Belleza xs:text-base sm:text-2xl font-bold m-0 p-0"
+      >
+        plants varieties.
+      </h1>
+    </div>
+    <!--  -->
+    <h2 class="xs:text-xs sm:text-sm text-bold">
+      Beautiful living greenery homes and offices
+    </h2>
+    <p class="font-Quicksand_L text-black text-xs py-4">
+      We've been mentioned in the press
+    </p>
+    <!--  -->
+    <div class="xs:w-2/3 sm:w-1/2">
+      <button
+        class="rounded-xl text-xs bg-black w-full h-fit text-white px-4 py-2"
+        >Shop now</button
+      >
+    </div>
+    <!--  -->
+    <div
+      class="absolute right-0 bottom-0 flex items-center justify-between pt-4 pl-4 z-10 gap-2"
+    >
+      <h2 class="font-Quicksand_B text-gray-light text-sm sm:text-base w-1/2">
+        Bloomberg
+      </h2>
+      <h2 class="font-Lora_B text-gray-light text-sm sm:text-base mr-6 w-1/2">
+        Forbes
+      </h2>
+    </div>
+  </div>
+
+  <!-- image -->
+  <div class="w-auto h-96 max-h-screen relative">
+    <Image
+      class="w-full h-full lg:object-contain absolute left-0"
+      src={plant}
+      alt="An image of a house plant"
+    />
+  </div>
+
+  <div class="md:flex">
+    <div class="w-full p-8 flex items-center justify-center">
+      <p class="font-Quicksand_L text-center text-sm">
+        Each houseplant set is handled quickly and safely before being sent to
+        your destination in specially designed insulated packaging.
+      </p>
+    </div>
+
+    <div class="w-full p-2 flex items-center justify-center">
+      <p class="text-center font-Belleza text-xl font-extrabold">
+        Learn how we take care of your plant at every stage of its journey from
+        our greenhouse to your home.
+      </p>
+    </div>
+  </div>
+</div>
