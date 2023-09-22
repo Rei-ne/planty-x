@@ -35,11 +35,12 @@ module.exports = {
 			'3xl': '1.953rem',
 			'4xl': '2.441rem',
 			'5xl': '3.052rem',
+			'6xl': '4.052rem',
 		},
 		screens: {
 			'xs': '275px',
 			'sm': '350px',
-			'md': '780px',
+			'md': '760px',
 			'lg': '1024px',
 		},
 	},
