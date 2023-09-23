@@ -86,20 +86,20 @@ export default function Nav() {
           animate="visible"
           initial="hidden"
           custom={1}
-          href="/plants"
+          href="/shop"
           className="hover:underline"
         >
-          Plants
+          Shop
         </motion.a>
         <motion.a
           variants={linkUp}
           animate="visible"
           initial="hidden"
           custom={2}
-          href="/services"
+          href="/about"
           className="hover:underline"
         >
-          Services
+          About
         </motion.a>
         <motion.a
           variants={linkUp}
@@ -167,11 +167,11 @@ export default function Nav() {
             <motion.a variants={linkMove} href="/">
               Home
             </motion.a>
-            <motion.a variants={linkMove} href="/plants">
-              Plants
+            <motion.a variants={linkMove} href="/shop">
+              Shop
             </motion.a>
-            <motion.a variants={linkMove} href="/services">
-              Services
+            <motion.a variants={linkMove} href="/about">
+              About
             </motion.a>
             <motion.a variants={linkMove} href="/contact">
               Contact
