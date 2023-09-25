@@ -2,9 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Plants from "../components/Plants.tsx";
+import Reviews from "../components/Reviews.tsx";
+import { RatingsData } from "../data";
+import { Image } from "astro:assets";
+import plant1 from "../assets/images/image2.png";
+import plant2 from "../assets/images/image3.png";
 ---
 
 <Layout title="Welcome to Planty'x.">
   <Hero />
   <Plants client:load />
+  <Reviews ratings={RatingsData} client:load />
+  <div class="flex grid-cols-2 w-full gap-x-6 px-6 mt-4">
+    <div class="w-2/5 h-auto">
+      <Image
+        class="h-full w-full"
+        src={plant1}
+        alt="An image of a house plant"
+      />
+    </div>
+    <div class="w-3/5 h-auto">
+      <Image
+        class="h-full w-full"
+        src={plant2}
+        alt="An image of a house plant"
+      />
+    </div>
+  </div>
 </Layout>

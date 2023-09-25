@@ -25,7 +25,7 @@
 }
 
 .custom-container {
-  width: 100%; /* Adjust the width as needed */
+  width: 80%; /* Adjust the width as needed */
   border: 1px solid #ccc; /* Border style */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
   background: linear-gradient(
