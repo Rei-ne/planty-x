@@ -1,7 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const formSubmit = async (event) => {
+  event.preventDefault();
+  alert("Thank you for your feedback");
+};
 ---
 
-<Layout title="Contact Green Life.">
-  <div class=""><h1>Contact Us For Your Plant Needs</h1></div>
+<Layout title="Contact Planty'x.">
+  <div class="bg-gray-100 min-h-screen py-8">
+    <div class="max-w-2xl mx-auto p-4">
+      <h1 class="text-3xl font-semibold mb-4">Contact Us</h1>
+      <form onsubmit="
+      { formSubmit }
+      ">
+        <div class="mb-4">
+          <label for="name" class="block font-medium">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full p-2 border rounded"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block font-medium">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full p-2 border rounded"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block font-medium">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            class="w-full p-2 border rounded"
+            rows="4"
+            required></textarea>
+        </div>
+        <div class="mb-4">
+          <button
+            type="submit"
+            class="px-4 py-2 bg-green text-black rounded hover:bg-blue-700"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </Layout>

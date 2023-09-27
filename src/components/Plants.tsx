@@ -13,7 +13,7 @@ const Plants: React.FC = () => {
           Here are the best seller from our varieties
         </p>
         <a
-          className="rounded-xl text-lg bg-black w-full h-fit text-white px-8 py-2 lg:w-fit lg:text-sm lg:rounded-2xl md:ml-3 font-Quicksand_L"
+          className="rounded-xl text-xs md:text-lg bg-black w-full h-fit text-white px-8 py-2 lg:w-fit lg:text-sm lg:rounded-2xl md:ml-3 font-Quicksand_L"
           href="/shop"
         >
           See all

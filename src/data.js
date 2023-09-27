@@ -46,7 +46,7 @@ export const plantsData = [
         id: "1",
         title: "Ore Stera",
         img: "/images/plant1.png",
-        price: "$99.00",
+        price: "$199.00",
     },
     {
         id: "2",
@@ -58,18 +58,50 @@ export const plantsData = [
         id: "3",
         title: "Lina Pothos",
         img: "/images/plant3.jpg",
-        price: "$59.99",
+        price: "$159.99",
     },
     {
         id: "4",
         title: "Jasmine Lily",
         img: "/images/plant4.jpg",
-        price: "$95.00",
+        price: "$195.00",
     },
     {
         id: "5",
         title: "Mokeji Bud",
         img: "/images/plant5.jpg",
         price: "$209.00",
+    },
+];
+export const LearnData = [
+    {
+        id: "1",
+        title: "Step 1",
+        img: "/images/unsplash_ZSZ6wzNU12Q.png",
+        text: "We put everything together.",
+    },
+    {
+        id: "2",
+        title: "Step 2",
+        img: "/images/unsplash_AnSGMc9Y6jc.png",
+        text: "Carefully package the plants for shipment.",
+    },
+    {
+        id: "3",
+        title: "Step 3",
+        img: "/images/unsplash_c5JawTf5UHA.png",
+        text: "Select the best delivery options for safe transit.",
+    },
+    {
+        id: "4",
+        title: "Step 4",
+        img: "/images/unsplash_j5vXcIzm_Iw.png",
+        text: "Deliver the plants to your doorstep with care.",
+    },
+    {
+        id: "5",
+        title: "Step 5",
+        img: "/images/unsplash_gqoDz8V2mW0.png",
+        text: "Provide post-delivery care instructions for your plants.",
     },
 ];

@@ -115,19 +115,19 @@ export default function Nav() {
 
       <div className="flex w-1/2 items-center justify-around sm:w-2/3 lg:w-1/5 lg:justify-center p-2">
         {/* icons */}
-        <div className="flex items-center justify-around  w-full gap-6 lg:w-1/2 lg:items-end mt-2 lg:m-0 ml-4">
+        <div className="flex items-center justify-around  w-full gap-6 lg:w-1/2 lg:items-end mt-2 lg:m-0 ml-10 ">
           <img
-            className="hover:cursor-pointer h-6 lg:h-5"
+            className="hover:cursor-pointer h-5"
             src={search.src}
             alt="search-icon"
           />
           <img
-            className="hover:cursor-pointer  h-6 lg:h-5"
+            className="hover:cursor-pointer  h-5"
             src={profile.src}
             alt="profile-icon"
           />
           <img
-            className="hover:cursor-pointer  h-6 lg:h-5"
+            className="hover:cursor-pointer  h-5"
             src={cart.src}
             alt="cart-icon"
           />

@@ -1,7 +1,54 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import plant from "../assets/images/plant4.png";
 ---
 
 <Layout title="About Planty'x.">
-  <div class=""><h1>About Planty'x</h1></div>
+  <div class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Content Section -->
+    <section class="container mx-auto flex flex-col lg:flex-row py-12">
+      <!-- Text Content -->
+      <div class="lg:w-1/2 px-6">
+        <h2 class="text-2xl font-semibold mb-4">
+          Bringing Nature into Your Life
+        </h2>
+        <p class="text-gray-700 leading-7">
+          We are passionate about providing the best houseplants for your home
+          and office spaces. Each houseplant set is carefully selected and
+          handled to ensure they thrive in your space. Our commitment to quality
+          and sustainability drives us to deliver the best greenery experience
+          to our customers.
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="lg:w-1/2 mt-8 lg:mt-0">
+        <Image
+          class="w-full rounded-lg"
+          src={plant}
+          alt="An image of a house plant"
+        />
+      </div>
+    </section>
+
+    <!-- Featured In Section -->
+    <section class="bg-gray-200 py-8">
+      <div class="container mx-auto text-center">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">As Featured In</h2>
+        <div class="flex justify-center space-x-6">
+          <div class="flex flex-col items-center">
+            <img
+              class="w-16 h-16"
+              src="/images/bloomberg.png"
+              alt="Bloomberg Logo"
+            />
+          </div>
+          <div class="flex flex-col items-center">
+            <img class="w-16 h-16" src="/images/forbes.png" alt="Forbes Logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </Layout>

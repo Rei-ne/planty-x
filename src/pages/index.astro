@@ -7,10 +7,13 @@ import { RatingsData } from "../data";
 import { Image } from "astro:assets";
 import plant1 from "../assets/images/image2.png";
 import plant2 from "../assets/images/image3.png";
+import LearnMore from "../components/LearnMore.astro";
+import plant from "../assets/images/plant4.png";
 ---
 
 <Layout title="Welcome to Planty'x.">
   <Hero />
+  <LearnMore />
   <Plants client:load />
   <Reviews ratings={RatingsData} client:load />
   <div class="flex grid-cols-2 w-full gap-x-6 px-6 mt-4">
@@ -28,5 +31,17 @@ import plant2 from "../assets/images/image3.png";
         alt="An image of a house plant"
       />
     </div>
+  </div>
+  <div class="mt-8">
+    <Image
+      class="w-full rounded-lg"
+      src={plant}
+      alt="An image of a house plant"
+    />
+  </div>
+  <div class="flex items-center justify-center w-full">
+    <h2 class="font-Lora_B w-4/5">
+      Stay update with special offers, plant-parenting tips, and more.
+    </h2>
   </div>
 </Layout>

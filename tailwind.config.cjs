@@ -16,7 +16,7 @@ module.exports = {
 			'white': '#ffffff',
 			'yellow': '#f8fe85',
 			'footer': '#656564',
-			'gray-light': '#818180',
+			'gray-light': '#C7C7C7',
 		},
 		fontFamily: {
 			Quicksand_B: ['Quicksand-Bold', ...defaultTheme.fontFamily.sans],
