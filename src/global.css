@@ -25,7 +25,7 @@
 }
 
 .custom-container {
-  width: 80%; /* Adjust the width as needed */
+  width: 90%;
   border: 1px solid #ccc; /* Border style */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
   background: linear-gradient(
@@ -33,6 +33,7 @@
     #f8f8f8,
     #ffffff
   ); /* Gradient background */
-  padding: 20px; /* Adjust padding as needed */
+  padding: 20px;
+
   border-radius: 8px; /* Rounded corners */
 }
