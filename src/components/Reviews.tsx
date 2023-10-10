@@ -53,11 +53,11 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
   };
   return (
     <section className="flex flex-col h-full relative items-center justify-center md:flex-row w-full">
-      <aside className="flex flex-col w-4/5 text-center md:w-2/5 p-6 items-center justify-center md:text-left md:items-start">
+      <aside className="flex flex-col w-4/5 text-center md:w-2/5 p-6 items-center justify-center md:text-left md:items-start md:ml-8 ">
         <h4 className="font-Belleza font-extrabold p-6 mt-4 md:mt-0 text-base md:px-0">
           REVIEWS
         </h4>
-        <p className="font-Quicksand_L text-center text-sm md:text-left md:justify-start md:text-xs lg:text-sm lg:pt-0 md:w-40">
+        <p className="font-Quicksand_L text-justify text-sm md:text-left md:justify-center md:text-xs lg:text-sm lg:pt-0 md:w-full lg:w-4/5">
           Shop with confidence by reading customer reviews given by individuals
           who have used Planty'x.
           <br /> Excellent quality and streamlined service are both offered
@@ -74,13 +74,13 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
           value={ratings[currentIndex].value}
           review={ratings[currentIndex].review}
         />
-        <aside className="flex w-fit absolute bottom-0 right-0 px-4 md:top-0 md:h-12 md:mt-4  ">
+        <aside className="flex w-fit absolute bottom-0 right-0 px-4 md:top-0 md:h-12 md:mt-8 lg:mt-4  ">
           <img
             id="left"
             src={arrowLeft.src}
             alt=""
             onClick={handlePrev}
-            style={{ cursor: "pointer" }}
+            className="w-10 h-10 cursor-pointer"
           />
 
           <img
@@ -88,7 +88,7 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
             src={arrowRight.src}
             alt=""
             onClick={handleNext}
-            style={{ cursor: "pointer" }}
+            className="w-10 h-10 cursor-pointer"
           />
         </aside>
       </div>

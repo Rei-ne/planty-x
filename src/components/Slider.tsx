@@ -27,7 +27,7 @@ const Slider: React.FC<SliderProps> = ({ plants }) => {
   return (
     <div className="w-full overflow-hidden relative">
       <div
-        className="flex gap-2 lg:gap-10 transition-transform duration-500 transform translate-x-[-100%]"
+        className="flex gap-0 sm:gap-2 lg:gap-10 transition-transform duration-500 transform translate-x-[-100%]"
         style={{
           width: `${plants.length * 100}%`,
           transform: `translateX(-${currentIndex * (100 / plants.length)}%)`,
