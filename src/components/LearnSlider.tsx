@@ -53,7 +53,7 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
   };
   return (
     <section className="flex flex-col h-full relative items-center justify-center md:flex-row w-full">
-      <aside className="flex flex-col w-4/5 text-center md:w-2/5 p-6 items-center justify-center md:text-left md:items-start">
+      <aside className="flex flex-col w-4/5 text-center md:w-2/5 p-6 items-center justify-center md:text-left md:items-start ">
         <h4 className="font-Belleza font-extrabold p-6 mt-4 md:mt-0 text-base md:px-0">
           REVIEWS
         </h4>
