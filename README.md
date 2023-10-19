@@ -1,4 +1,4 @@
-# Reine's Astro Website Template
+# Reine's Astro Website Template --WIP 🛠
 
 ## Website Template for a Plant and Gardening company - Planty'x
 
