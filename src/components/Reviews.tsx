@@ -18,22 +18,20 @@ const ReviewCard: React.FC<Props> = ({
 }) => {
   return (
     <div className="w-full md:2/4 lg:w-3/4 self-center flex flex-col h-full items-center">
-      <div className="md:w-[400px] lg:w-[700px] self-start ">
-        <div className="w-full font-Quicksand_B text-xl text-center p-4 order-2 lg:text-3xl md:text-left md:h-60">
+      <div className="md:w-[400px] lg:w-[800px] md:self-start self-center">
+        <div className="w-full font-Quicksand_B text-xl text-center p-4  lg:text-3xl md:text-left xs:h-60 sm:h-40 md:h-60 my-4 md:m-0">
           <p className="">{review}</p>
         </div>
-        <div className="flex py-2 ">
-          <div className="customer flex flex-col order-3 w-1/2 self-start p-4 ml-4 md:ml-0">
-            <p className="font-Belleza font-extrabold text-base md:text-xl">
+        <div className="flex py-2 mt-8 ">
+          <div className="customer flex flex-col w-1/2 self-center md:self-start p-4 ml-4 md:ml-0">
+            <p className="font-Belleza font-extrabold text-xl">
               {customer_name}
             </p>
-            <p className="font-Quicksand_L text-sm md:text-base">{location}</p>
+            <p className="font-Quicksand_L text-xs sm:text-base">{location}</p>
           </div>
-          <div className="flex flex-col order-3 w-1/2  p-4 ml-4 md:ml-0 items-end">
+          <div className="flex flex-col   w-1/2  p-4 ml-4 md:ml-0 items-end">
             <Rating name="read-only" value={value} readOnly />
-            <p className="text-sm md:text-base font-Quicksand_B p-4 md:p-1">
-              {value}/5
-            </p>
+            <p className="text-base font-Quicksand_B  p-1">{value}/5</p>
           </div>
         </div>
       </div>
@@ -59,12 +57,12 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
   };
   return (
     <section className="flex flex-col h-full relative items-center justify-center lg:justify-between md:flex-row w-full md:justify-around ">
-      <aside className="flex flex-col md:w-2/4 xs:text-center lg:w-2/4 h-full p-6 items-center justify-start md:text-left md:items-start md:ml-8">
-        <h4 className="font-Belleza font-extrabold p-6 lg:mt-4 text-base md:px-0 ">
+      <aside className="flex flex-col md:w-2/4 xs:text-center lg:w-2/4 h-full md:h-[400px] p-6 items-center justify-start md:text-left md:items-start md:ml-8">
+        <h4 className="font-Belleza font-extrabold p-6 lg:mt-4 text-xl md:text-base md:px-0 ">
           REVIEWS
         </h4>
         <p
-          className="font-Quicksand_L text-justify text-sm md:text-left md:justify-center md:text-xs lg:text-sm lg:pt-0 md:w-4/5 "
+          className="font-Quicksand_L text-justify w-3/5 md:text-left md:justify-center text-xs lg:text-sm lg:pt-0 md:w-4/5"
           style={{ maxHeight: "100%", overflow: "auto" }}
         >
           Shop with confidence by reading customer reviews given by individuals
@@ -84,7 +82,7 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
         review={ratings[currentIndex].review}
       />
       <aside className="flex w-4/5 text-center md:w-2/4 lg:w-1/4 md:h-[400px] p-6 items-center justify-center md:text-left md:items-start ">
-        <div className="flex py-4">
+        <div className="flex py-4 gap-2">
           <img
             id="left"
             src={arrowLeft.src}

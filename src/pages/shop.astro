@@ -1,8 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Plants from "../components/Plants.tsx";
+import PlantCard from "../components/PlantCard.tsx";
+import { plantsData } from "../data";
 ---
 
 <Layout title="Our Shop - Plants.">
-  <Plants client:load />
+  <h3
+    class="md:px-4 py-2 font-extrabold font-Quicksand_B text-base text-center"
+  >
+    OUR SHOP
+  </h3>
+  {
+    plantsData.map((plant) => (
+      <PlantCard img={plant.img} title={plant.title} price={plant.price} />
+    ))
+  }
 </Layout>
