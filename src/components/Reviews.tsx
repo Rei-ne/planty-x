@@ -17,19 +17,25 @@ const ReviewCard: React.FC<Props> = ({
   location,
 }) => {
   return (
-    <div className="w-full md:w-4/5 flex flex-col h-fit items-center relative">
-      <div className="w-full font-Quicksand_B text-xl text-center p-4 order-2 md:w-full md:text-2xl">
-        <p className="lg:h-40">{review}</p>
-      </div>
-      <div className="customer flex flex-col order-3 w-1/2 self-start pl-4 ml-4">
-        <p className="font-Belleza font-extrabold text-base md:text-xl">
-          {customer_name}
-        </p>
-        <p className="font-Quicksand_L text-sm md:text-base">{location}</p>
-      </div>
-      <div className="order-1 flex items-center justify-center md:flex-col md:items-end  md:absolute md:bottom-0 md:right-0 ">
-        <Rating name="read-only" value={value} readOnly />
-        <p className="text-lg font-Quicksand_B p-4 md:p-1">{value}/5</p>
+    <div className="w-full md:2/4 lg:w-3/4 self-center flex flex-col h-full items-center">
+      <div className="md:w-[400px] lg:w-[700px] self-start ">
+        <div className="w-full font-Quicksand_B text-xl text-center p-4 order-2 lg:text-3xl md:text-left md:h-60">
+          <p className="">{review}</p>
+        </div>
+        <div className="flex py-2 ">
+          <div className="customer flex flex-col order-3 w-1/2 self-start p-4 ml-4 md:ml-0">
+            <p className="font-Belleza font-extrabold text-base md:text-xl">
+              {customer_name}
+            </p>
+            <p className="font-Quicksand_L text-sm md:text-base">{location}</p>
+          </div>
+          <div className="flex flex-col order-3 w-1/2  p-4 ml-4 md:ml-0 items-end">
+            <Rating name="read-only" value={value} readOnly />
+            <p className="text-sm md:text-base font-Quicksand_B p-4 md:p-1">
+              {value}/5
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -52,12 +58,15 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
     );
   };
   return (
-    <section className="flex flex-col h-full relative items-center justify-center md:flex-row w-full">
-      <aside className="flex flex-col w-4/5 text-center md:w-2/5 p-6 items-center justify-center md:text-left md:items-start md:ml-8 ">
-        <h4 className="font-Belleza font-extrabold p-6 mt-4 md:mt-0 text-base md:px-0">
+    <section className="flex flex-col h-full relative items-center justify-center lg:justify-between md:flex-row w-full md:justify-around ">
+      <aside className="flex flex-col md:w-2/4 xs:text-center lg:w-2/4 h-full p-6 items-center justify-start md:text-left md:items-start md:ml-8">
+        <h4 className="font-Belleza font-extrabold p-6 lg:mt-4 text-base md:px-0 ">
           REVIEWS
         </h4>
-        <p className="font-Quicksand_L text-justify text-sm md:text-left md:justify-center md:text-xs lg:text-sm lg:pt-0 md:w-full lg:w-4/5">
+        <p
+          className="font-Quicksand_L text-justify text-sm md:text-left md:justify-center md:text-xs lg:text-sm lg:pt-0 md:w-4/5 "
+          style={{ maxHeight: "100%", overflow: "auto" }}
+        >
           Shop with confidence by reading customer reviews given by individuals
           who have used Planty'x.
           <br /> Excellent quality and streamlined service are both offered
@@ -67,14 +76,15 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
           1479 views
         </p>
       </aside>
-      <div className="md:relative">
-        <ReviewCard
-          customer_name={ratings[currentIndex].customer_name}
-          location={ratings[currentIndex].location}
-          value={ratings[currentIndex].value}
-          review={ratings[currentIndex].review}
-        />
-        <aside className="flex w-fit absolute bottom-0 right-0 px-4 md:top-0 md:h-12 md:mt-8 lg:mt-4  ">
+
+      <ReviewCard
+        customer_name={ratings[currentIndex].customer_name}
+        location={ratings[currentIndex].location}
+        value={ratings[currentIndex].value}
+        review={ratings[currentIndex].review}
+      />
+      <aside className="flex w-4/5 text-center md:w-2/4 lg:w-1/4 md:h-[400px] p-6 items-center justify-center md:text-left md:items-start ">
+        <div className="flex py-4">
           <img
             id="left"
             src={arrowLeft.src}
@@ -90,8 +100,8 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
             onClick={handleNext}
             className="w-10 h-10 cursor-pointer"
           />
-        </aside>
-      </div>
+        </div>
+      </aside>
     </section>
   );
 };
