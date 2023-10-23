@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import Plants from "../components/Plants.tsx";
+import PlantSlider from "../components/PlantSlider.tsx";
 import Reviews from "../components/Reviews.tsx";
 import { RatingsData } from "../data";
 import { Image } from "astro:assets";
@@ -14,34 +14,46 @@ import plant from "../assets/images/plant4.png";
 <Layout title="Welcome to Planty'x.">
   <Hero />
   <LearnMore />
-  <Plants client:load />
+  <PlantSlider client:load />
   <Reviews ratings={RatingsData} client:load />
   <div class="flex grid-cols-2 w-full gap-x-6 px-6 mt-4">
-    <div class="w-2/5 h-auto">
+    <div class="w-2/5 h-[270px] lg:h-auto">
       <Image
-        class="h-full w-full"
+        class="h-full w-full object-fill"
         src={plant1}
         alt="An image of a house plant"
       />
     </div>
-    <div class="w-3/5 h-auto">
+    <div class="w-3/5 h-[270px] lg:h-auto">
       <Image
-        class="h-full w-full"
+        class="h-full w-full object-fill"
         src={plant2}
         alt="An image of a house plant"
       />
     </div>
   </div>
-  <div class="mt-8">
-    <Image
-      class="w-full rounded-lg"
-      src={plant}
-      alt="An image of a house plant"
-    />
+  <div class="w-full flex items-center justify-center px-6 relative mt-8">
+    <div class="z-10 absolute top-2 left-12">
+      <h3>Get inspired from my instagram</h3>
+      <p>If you use the hashtag #reinedev on instagram I'll spotlight you</p>
+    </div>
+    <div class="">
+      <Image
+        class="w-full rounded-lg object-contain"
+        src={plant}
+        alt="An image of a house plant"
+      />
+    </div>
   </div>
+
   <div class="flex items-center justify-center w-full">
-    <h2 class="font-Lora_B w-4/5">
-      Stay update with special offers, plant-parenting tips, and more.
+    <h2 class="font-Belleza w-4/5 text-2xl">
+      Stay updated with special offers, plant-parenting tips, and more.
     </h2>
+    <div>
+      <label for="email">email</label>
+      <input type="text" />
+      <button>Subscribe</button>
+    </div>
   </div>
 </Layout>
