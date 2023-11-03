@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import PlantCard from "../components/PlantCard.tsx";
+import PlantShop from "../components/PlantShop.tsx";
 import { plantsData } from "../data";
 ---
 
@@ -10,9 +10,23 @@ import { plantsData } from "../data";
   >
     OUR SHOP
   </h3>
-  {
-    plantsData.map((plant) => (
-      <PlantCard img={plant.img} title={plant.title} price={plant.price} />
-    ))
-  }
+  <div class="plants-container">
+    {
+      plantsData.map((plant) => (
+        <PlantShop img={plant.img} title={plant.title} price={plant.price} />
+      ))
+    }
+  </div>
 </Layout>
+<style>
+  .plants-container {
+    @media (min-width: 760px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+      margin-bottom: 1rem;
+    }
+    display: block;
+    margin-bottom: 1rem;
+  }
+</style>

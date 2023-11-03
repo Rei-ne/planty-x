@@ -15,7 +15,7 @@ module.exports = {
 			'gray-dark': '#273444',
 			'white': '#ffffff',
 			'yellow': '#f8fe85',
-			'footer': '#656564',
+			'footer': '#f3f3f3',
 			'gray-light': '#C7C7C7',
 		},
 		fontFamily: {

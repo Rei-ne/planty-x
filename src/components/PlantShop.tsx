@@ -6,10 +6,10 @@ interface Props {
   price: string;
 }
 
-const PlantCard: React.FC<Props> = ({ title, img, price }) => {
+const PlantShop: React.FC<Props> = ({ title, img, price }) => {
   return (
     <div className="card mt-4 w-full flex flex-col items-center justify-center">
-      <div className=" flex items-center flex-col justify-between md:w-full custom-container ">
+      <div className=" flex items-center flex-col justify-between md:w-[300px] custom-container ">
         <img
           className="w-40 h-60 sm:w-60  sm:h-80  rounded-lg"
           src={img}
@@ -28,4 +28,4 @@ const PlantCard: React.FC<Props> = ({ title, img, price }) => {
   );
 };
 
-export default PlantCard;
+export default PlantShop;
