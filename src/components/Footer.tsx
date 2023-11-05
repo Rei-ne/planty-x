@@ -9,14 +9,16 @@ import twitter from "../assets/icons/twitter.png";
 
 const Footer = () => {
   return (
-    <section className="font-Quicksand_L bg-footer flex items-center justify-center py-8 w-screen  h-[280px]">
+    <section className="font-Quicksand_L bg-footer flex items-center justify-center py-8 w-full  h-[280px]">
       <div className=" flex flex-col items-center justify-between gap-4">
-        <div className="footer-logo w-32 h-12">
+        <div className="footer-logo w-28 h-12">
           <img src={logo.src} alt="" />
         </div>
-        <div className="footer-text text-center">
+        <div className="footer-text text-center gap-5">
           <div>
-            <h2>Built by Reine_Dev</h2>
+            <h2>
+              Built by <a href="https://github.com/Rei-ne/">Reine_Dev</a>{" "}
+            </h2>
           </div>
           <div>
             <h2>Help</h2>
