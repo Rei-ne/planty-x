@@ -9,7 +9,7 @@
 
 Astro is an all-in-one web framework for building fast, content-focused websites.
 
-[live link](#)
+[live link](https://plantyx.reine.dev/)
 
 ## Starting the app locally
 
