@@ -57,9 +57,13 @@ export default function Nav() {
 
   return (
     <nav className="flex items-center justify-between text-black pt-8 pb-4 mb-4 relative mx-4 md:mx-10 lg:mx-12 text-center">
-      <div className="flex justify-center items-center gap-2 h-full w-1/3 lg:w-1/5 md:justify-start">
+      <div className="flex  items-center gap-2 h-full w-1/2 lg:w-1/5 justify-start">
         <a href="/" className="text-black flex items-center justify-center">
-          <img className="h-8 w-full md:w-fit" src={logo.src} alt="logo" />
+          <img
+            className="h-7 md:h-8 m-4 w-full md:w-fit"
+            src={logo.src}
+            alt="logo"
+          />
         </a>
       </div>
 
@@ -113,21 +117,21 @@ export default function Nav() {
         </motion.a>
       </motion.div>
 
-      <div className="flex w-1/2 items-center justify-around sm:w-2/3 lg:w-1/5 lg:justify-center p-2">
+      <div className="flex w-1/2 items-center justify-around lg:w-1/5 lg:justify-center p-2 ">
         {/* icons */}
-        <div className="flex items-center justify-around  w-full gap-6 lg:w-1/2 lg:items-end mt-2 lg:m-0 ml-10 ">
+        <div className="flex items-center justify-around  w-full gap-4 lg:w-1/2 lg:items-end mt-2 lg:m-0 ml-10 ">
           <img
-            className="hover:cursor-pointer h-5"
+            className="hover:cursor-pointer h-4"
             src={search.src}
             alt="search-icon"
           />
           <img
-            className="hover:cursor-pointer  h-5"
+            className="hover:cursor-pointer  h-4"
             src={profile.src}
             alt="profile-icon"
           />
           <img
-            className="hover:cursor-pointer  h-5"
+            className="hover:cursor-pointer  h-4"
             src={cart.src}
             alt="cart-icon"
           />
@@ -140,14 +144,14 @@ export default function Nav() {
         >
           <motion.span
             animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 5 : 0 }}
-            className="block h-0.5 w-6 bg-black"
+            className="block h-0.5 w-4 bg-black"
           ></motion.span>
           <motion.span
             animate={{
               rotateZ: toggled ? -45 : 0,
               y: toggled ? -5 : 0,
             }}
-            className="block h-0.5 w-6 bg-black"
+            className="block h-0.5 w-4 bg-black"
           ></motion.span>
         </div>
       </div>

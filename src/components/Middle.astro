@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import plant1 from "../assets/images/image2.png";
+import plant2 from "../assets/images/image3.png";
+
+import plant from "../assets/images/plant4.png";
+---
+
+<div class="flex grid-cols-2 w-full gap-x-6 px-6 mt-4">
+  <div class="w-2/5 h-[270px] lg:h-auto">
+    <Image
+      class="h-full w-fit object-fill"
+      src={plant1}
+      alt="An image of a house plant"
+    />
+  </div>
+  <div class="w-3/5 h-[270px] lg:h-auto">
+    <Image
+      class="h-full w-fit object-fill"
+      src={plant2}
+      alt="An image of a house plant"
+    />
+  </div>
+</div>
+<div class="w-full flex items-center justify-center px-6 relative mt-8">
+  <div class="z-10 absolute top-2 left-12">
+    <h3>Get inspired from my instagram</h3>
+    <p>If you use the hashtag #reinedev on instagram I'll spotlight you</p>
+  </div>
+  <div class="">
+    <Image
+      class="w-full rounded-lg object-contain"
+      src={plant}
+      alt="An image of a house plant"
+    />
+  </div>
+</div>
+<div class="flex items-center justify-center w-full">
+  <h2 class="font-Belleza text-2xl">
+    Stay updated with special offers, plant-parenting tips, and more.
+  </h2>
+</div>
+<div>
+  <label for="email">email</label>
+  <input type="text" />
+  <button>Subscribe</button>
+</div>
