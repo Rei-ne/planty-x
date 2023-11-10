@@ -57,7 +57,7 @@ export default function Nav() {
 
   return (
     <nav className="flex items-center justify-between text-black pt-8 pb-4 mb-4 relative mx-4 md:mx-10 lg:mx-12 text-center">
-      <div className="flex  items-center gap-2 h-full w-1/2 lg:w-1/5 justify-start">
+      <div className="flex  items-center gap-2 h-full w-1/2 lg:w-1/5 justify-start border">
         <a href="/" className="text-black flex items-center justify-center">
           <img
             className="h-7 md:h-8 m-4 w-full md:w-fit"
