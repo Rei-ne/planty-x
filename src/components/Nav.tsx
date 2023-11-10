@@ -60,7 +60,7 @@ export default function Nav() {
       <div className="flex  items-center gap-2 h-full w-1/2 lg:w-1/5 justify-start ">
         <a href="/" className="text-black flex items-center justify-center">
           <img
-            className="h-7 md:h-8 m-4 w-fit md:w-fit"
+            className="h-7 md:h-8 m-4 w-24 md:w-fit"
             src={logo.src}
             alt="logo"
           />
