@@ -22,32 +22,43 @@ export default function ContactForm(): JSX.Element {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Create a form data object
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("message", message);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        setName("");
-        setEmail("");
-        setMessage("");
-        const data = await response.json();
-        setResponseMessage(data.message);
-      } else {
-        console.error("An error occurred while submitting the form");
-      }
-
-      setIsSubmitting(false);
-    } catch (error) {
-      console.error("An error occurred while submitting the form", error);
+    if (message) {
+      setName("");
+      setEmail("");
+      setMessage("");
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setResponseMessage(message);
+      }, 3000);
+    } else {
+      console.error("An error occurred while submitting the form");
     }
+    // Create a form data object
+    // const formData = new FormData();
+    // formData.append("name", name);
+    // formData.append("email", email);
+    // formData.append("message", message);
+
+    // try {
+    //   const response = await fetch("/api/contact", {
+    //     method: "POST",
+    //     body: formData,
+    //   });
+
+    //   if (response.ok) {
+    //     setName("");
+    //     setEmail("");
+    //     setMessage("");
+    //     const data = await response.json();
+    //     setResponseMessage(data.message);
+    //   } else {
+    //     console.error("An error occurred while submitting the form");
+    //   }
+
+    //   setIsSubmitting(false);
+    // } catch (error) {
+    //   console.error("An error occurred while submitting the form", error);
+    // }
   }
 
   return (
@@ -90,7 +101,7 @@ export default function ContactForm(): JSX.Element {
       <div className="mb-4">
         <button
           type="submit"
-          className="px-4 py-2 bg-green text-black rounded hover:bg-blue-700"
+          className="xs:text-xs sm:text-sm bg-black w-[120px] lg:w-[160px] text-white py-2 px-4 md:my-4 lg:px-8 rounded-full font-Quicksand_L"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Submitting..." : "Submit"}

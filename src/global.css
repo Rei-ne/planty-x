@@ -23,7 +23,16 @@
   src: url("/fonts/Quicksand/Quicksand-Light.ttf") format("truetype");
   font-weight: normal;
 }
-
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  .app-container {
+    width: 100%;
+  }
+}
 .custom-container {
   width: 90%;
   border: 1px solid #ccc; /* Border style */

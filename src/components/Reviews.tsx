@@ -19,7 +19,7 @@ const ReviewCard: React.FC<Props> = ({
   return (
     <div className="w-full md:2/4 lg:w-3/4 self-center flex flex-col h-full items-center">
       <div className="md:w-[400px] lg:w-full md:self-start self-center  ">
-        <div className="w-full font-Quicksand_B text-xl text-center p-4 lg:text-3xl md:text-left xs:h-60 sm:h-40 md:h-52 lg:h-60 my-4 md:m-0  ">
+        <div className="w-full font-Quicksand_B text-base md:text-xl text-center p-4 lg:text-3xl md:text-left xs:h-60 sm:h-32 md:h-52 lg:h-60 my-4 md:m-0  ">
           <p className="">{review}</p>
         </div>
         <div className="flex py-2 mt-8 md:mt-0 ">
@@ -62,7 +62,7 @@ const Reviews: React.FC<ReviewsProps> = ({ ratings }) => {
           REVIEWS
         </h4>
         <p
-          className="font-Quicksand_L text-justify w-4/5 md:text-left md:justify-center text-base md:text-sm lg:pt-0 md:w-4/5"
+          className="font-Quicksand_L text-justify w-4/5 md:text-left md:justify-center text-sm  lg:pt-0 md:w-4/5"
           style={{ maxHeight: "100%", overflow: "auto" }}
         >
           Shop with confidence by reading customer reviews given by individuals
