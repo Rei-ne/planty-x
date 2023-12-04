@@ -10,14 +10,14 @@ import twitter from "../assets/icons/twitter.png";
 const Footer = () => {
   return (
     <>
-      <div className="w-full lg:flex px-8">
+      <div className="w-full lg:flex lg:px-8">
         <div className="flex items-center justify-center w-4/5 text-center mx-auto py-8 lg:w-1/2 lg:text-left">
-          <h2 className="font-Quicksand-B text-xl lg:text-3xl">
+          <h2 className="font-Quicksand_B text-xl lg:text-2xl">
             Stay updated with special offers, plant-parenting tips, and more.
           </h2>
         </div>
         <div className="py-2 lg:bg-white bg-footer flex items-center justify-center relative w-full lg:w-1/2">
-          <div className="relative w-full lg:mx-5">
+          <div className="relative w-full lg:mx-5 mx-3">
             <input
               id="email"
               type="text"
@@ -40,14 +40,11 @@ const Footer = () => {
               <img src={logo.src} alt="planty'x logo" />
             </a>
           </div>
-          <div className="footer-text text-center gap-5">
+          <div className="footer-text text-center gap-5 text-base">
             <div>
               <h2 className="pb-4">
                 Built by{" "}
-                <a
-                  className="italic font-bold"
-                  href="https://github.com/Rei-ne/"
-                >
+                <a className=" font-bold" href="https://github.com/Rei-ne/">
                   Reine_Dev
                 </a>
               </h2>
